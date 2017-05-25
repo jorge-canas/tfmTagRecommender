@@ -1,0 +1,14 @@
+{% extends 'pueblos/base.html' %}
+
+{% block content %}
+    <h3>Parámetros ejecutados</h3>
+    {% if cleaned_data %}
+        {% for field,value in cleaned_data.items %}
+            <p>{{field}}: {{value}}</p>
+        {% endfor %}
+    {% endif %}
+    <br />
+    <br />
+    <a href="{{request.META.HTTP_REFERER}}">Volver atrás</a>
+    <a href="{% url 'pueblos:index' %}}">Volver al índice</a>
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends 'pueblos/base.html' %}
+
+{% block content %}
+    <h1>Gestionar noticias categorizadas</h1>
+    <hr>
+    {% if news %}
+        <div class="list-group d-block">
+        {% for n in news %}
+            <a href="{% url 'pueblos:show_news_categories' n.id %}" class="list-group-item">
+                {{ n.dstitular }}
+            </a>
+        {% endfor %}
+        </div>
+    {% else %}
+        <p>No hay noticias categorizadas.</p>
+    {% endif %}
+     <div class="d-block">
+        <a href="{% url 'pueblos:index' %}">Volver atrás</a>
+    </div>
+    </br>
+{% endblock content %}

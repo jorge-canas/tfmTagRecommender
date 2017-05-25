@@ -1,0 +1,5 @@
+{% extends 'pueblos/base.html' %}
+{% load staticfiles %}
+{% block content %}
+    <h1 class="text-center">Palabras singularizadas, entre <a href="{% url 'pueblos:syntactic_dictionary' 1 'plural' %}">aquí</a> para ver los resultados</h1>
+{% endblock content %}

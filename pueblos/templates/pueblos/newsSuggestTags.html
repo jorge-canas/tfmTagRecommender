@@ -1,0 +1,37 @@
+{% extends 'pueblos/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<h1 class="align-left">Sugerir etiquetas a una noticia</h1>
+<hr>
+<form action="{% url 'pueblos:news_suggest_tags' %}" method="post">
+    {% csrf_token %}
+    <div class="form-group col-xs-12">
+        <label for="{{ form.news_body.name }}">{{ form.news_body.label }}:</label><br>
+        {{ form.news_body }}
+    </div>
+    {% if form.errors %}
+        {% for field in form %}
+            {% for error in field.errors %}
+                <div class="alert alert-danger">
+                    <strong>{{ error|escape }}</strong>
+                </div>
+            {% endfor %}
+        {% endfor %}
+        {% for error in form.non_field_errors %}
+            <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% if suggested_tags %}
+        <div class="form-group">
+            {{ suggested_tags }}
+        </div>
+    {% endif %}
+    <input type="submit" value="Sugerir">
+</form>
+
+<br />
+<br />
+<a href="{% url 'pueblos:index' %}">Volver atrás</a>
+{% endblock content %}

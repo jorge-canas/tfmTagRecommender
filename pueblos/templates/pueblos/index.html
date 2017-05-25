@@ -1,0 +1,29 @@
+{% extends 'pueblos/base.html' %}
+
+{% block content %}
+    <h1>Listado de secciones</h1>
+    <hr class="col-xs-10">
+    <div class="list-group col-xs-3">
+        <a href="{% url 'pueblos:news200List' %}" class="list-group-item">
+            Listado de noticias de entrenamiento
+        </a>
+        <a href="{% url 'pueblos:news_context_step' %}" class="list-group-item">
+            Administrar noticias entrenamiento y contexto
+        </a>
+        <a href="{% url 'pueblos:list_categorized_news' %}" class="list-group-item">
+            Gestionar noticias categorizadas
+        </a>
+        <a href="{% url 'pueblos:news_suggest_tags' %}" class="list-group-item">
+            Sugerir etiquetas a noticia
+        </a>
+        <!--a href="{% url 'pueblos:news_context' %}" class="list-group-item">
+        Generar caso de estudio
+        </a-->
+        <a href="{% url 'pueblos:syntactic_dictionary' 1 None %}" class="list-group-item">
+            Diccionario sintáctico
+        </a>
+        <a href="{% url 'pueblos:syntactic_dictionary' 1 'plural' %}" class="list-group-item">
+            Diccionario sintáctico solo para plurales
+        </a>
+    </div>
+{% endblock content %}

@@ -1,0 +1,23 @@
+{% extends 'pueblos/base.html' %}
+
+{% block content %}
+    <h1>Administrar noticias entrenamiento y contexto</h1>
+    <hr>
+    <div class="list-group col-xs-4 d-block">
+        <a href="/pueblos/cleanDB/setIndividualContext" class="list-group-item">
+            Limpiar BD
+        </a>
+        <a href="/pueblos/processWord/setIndividualContext" class="list-group-item">
+            Procesar palabras de noticias
+        </a>
+        <a href="/pueblos/generateContext/setIndividualContext" class="list-group-item">
+            Generar contexto
+        </a>
+        <a href="/pueblos/getRandomNews/setIndividualContext" class="list-group-item">
+            Generar lista de noticias con categorías
+        </a>
+    </div>
+    <div class="d-block col-xs-10">
+        <a href="{% url 'pueblos:index' %}">Volver atrás</a>
+    </div>
+{% endblock content %}

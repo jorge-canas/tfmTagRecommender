@@ -1,0 +1,15 @@
+{% extends 'pueblos/base.html' %}
+
+{% block content %}
+    <h1>Comprobar el estado de un caso de uso</h1>
+    <hr>
+    {% if state %}
+        <h3>El estado del caso de uso es: {{ state }} </h3>
+    {% else %}
+        <h3>El caso de uso que ha solicitado no existe</h3>
+    {% endif %}
+    <br />
+    <div class="d-block">
+        <a href="{% url 'pueblos:index' %}">Volver atrás</a>
+    </div>
+{% endblock content %}

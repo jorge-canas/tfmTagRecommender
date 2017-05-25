@@ -1,0 +1,7 @@
+INSERT INTO `pueblos_noticias_200`(`dstitular`,`dscuerpo`,`noticia_id`)
+SELECT DISTINCT noticia.dstitular, noticia.dscuerpo, noticia.id
+FROM `pueblos_noticias` AS noticia
+INNER JOIN `pueblos_nc`AS nc
+ON noticia.id = nc.noticia_id AND nc.categoria_id != 53 AND length(noticia.dscuerpo) > 255
+ORDER BY RAND()
+LIMIT 230

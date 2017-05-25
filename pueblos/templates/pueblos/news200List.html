@@ -1,0 +1,15 @@
+{% extends 'pueblos/base.html' %}
+
+{% block content %}
+    <h1>Listado de noticias de entrenamiento</h1>
+    <hr>
+    {% if lista_noticias_200 %}
+        <div class="list-group d-block">
+        {% for noticia in lista_noticias_200 %}
+            <a href="{% url 'pueblos:noticia200' noticia.id %}" class="list-group-item"> {{ noticia.dstitular }} </a>
+        {% endfor %}
+        </div>
+    {% else %}
+        <p>No hay noticias.</p>
+    {% endif %}
+{% endblock content %}

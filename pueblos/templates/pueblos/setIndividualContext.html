@@ -1,0 +1,28 @@
+{% extends 'pueblos/base.html' %}
+{% load staticfiles %}
+{% block content %}
+    {% if form %}
+        <form id="myform" action="{{ action_url }}" method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Ejecutar">
+            <!--a href="javascript:execForm('{{ action_url }}')" class="setOptionsAndSubmit">Ejecutar</a-->
+        </form>
+    {% else %}
+        <a href="javascript:execCall('{{ action_url }}')" class="setOptionsAndSubmit">Ejecutar</a>
+    {% endif %}
+
+    <div class="error"></div>
+    <div class="ajaxProgress">
+        <h3>Por favor espere... Esta tarea puede tardar varios minutos</h3>
+        <img src="{%  static 'pueblos/img/ajax-loader.gif' %}">
+    </div>
+
+    <div id="output"></div>
+
+    <br />
+    <br />
+    <a href="{{request.META.HTTP_REFERER}}">Volver atrás</a>
+
+    <script type="text/javascript" src="{%  static 'pueblos/js/setIndividualContext.js' %}"></script>
+{% endblock content %}

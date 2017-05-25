@@ -1,0 +1,121 @@
+abril
+agosto
+ante
+aunque
+bajo
+cabe
+cada
+como
+conque
+contra
+cuando
+desde
+diciembre
+domingo
+donde
+durante
+empero
+enero
+entonces
+entre
+ergo
+excepto
+febrero
+gran
+hacia
+hasta
+incluso
+jueves
+julio
+junio
+luego
+lunes
+martes
+marzo
+mayo
+mediante
+menos
+mientras
+miércoles
+noviembre
+octubre
+otro
+otros
+para
+pero
+porque
+pues
+sábado
+salvo
+según
+septiembre
+sido
+sino
+siquiera
+sobre
+tras
+unas
+unos
+viernes
+
+-------------------------------
+
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('abril');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('agosto');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('ante');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('aunque');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('bajo');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('cabe');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('cada');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('como');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('conque');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('contra');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('cuando');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('desde');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('diciembre');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('domingo');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('donde');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('durante');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('empero');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('enero');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('entonces');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('entre');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('ergo');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('excepto');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('febrero');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('gran');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('hacia');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('hasta');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('incluso');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('jueves');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('julio');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('junio');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('luego');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('lunes');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('martes');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('marzo');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('mayo');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('mediante');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('menos');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('mientras');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('miércoles');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('noviembre');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('octubre');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('otro');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('otros');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('para');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('pero');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('porque');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('pues');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('sábado');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('salvo');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('según');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('septiembre');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('sido');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('sino');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('siquiera');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('sobre');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('tras');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('unas');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('unos');
+INSERT INTO `pueblos_palabras_eliminar`(`palabra`) VALUES ('viernes');

@@ -1,0 +1,10 @@
+{% extends 'pueblos/base.html' %}
+
+{% block content %}
+    <h1>{{ pueblosnoticias.dstitular }}</h1>
+
+    {{ pueblosnoticias.dscuerpo }}
+    <br />
+    <br />
+    <a href="{{request.META.HTTP_REFERER}}">Volver atrás</a>
+{% endblock content %}

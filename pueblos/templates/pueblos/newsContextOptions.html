@@ -1,0 +1,23 @@
+{% extends 'pueblos/base.html' %}
+{% load staticfiles %}
+{% block content %}
+    <h1>Generar caso de estudio</h1>
+<h3 class="align-left">En esta sección podrá crear casos de estudio para su posterior revisión</h3>
+<hr>
+<form action="{% url 'pueblos:news_context' %}" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <div class="ajaxProgress">
+        <h3>Por favor espere... Esta tarea puede tardar varios segundos</h3>
+        <img src="{%  static "pueblos/img/ajax-loader.gif" %}">
+    </div>
+    <a href="javascript:FireCall()" class="setOptionsAndSubmit btn btn-success">Ejecutar</a>
+</form>
+<div id="error">Hay algún error con la petición, revise que los datos sean los correctos</div>
+<div id="output"></div>
+
+<br />
+<br />
+<a href="{% url 'pueblos:index' %}">Volver atrás</a>
+    <script type="text/javascript" src="{%  static "pueblos/js/newsContextOptions.js" %}"></script>
+{% endblock content %}

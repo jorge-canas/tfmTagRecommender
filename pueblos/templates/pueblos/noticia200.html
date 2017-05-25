@@ -1,0 +1,38 @@
+{% extends 'pueblos/base.html' %}
+
+{% block content %}
+    <h1>{{ noticia.dstitular }}</h1>
+
+    {{ noticia.dscuerpo }}
+
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+    <div>
+        <h3>Esta noticia tiene las siguientes categorías:</h3>
+    {% for categoria in categorias %}
+        <p class="lead">{{categoria}}</p>
+    {% endfor %}
+    </div>
+    <hr>
+
+    <form action="{% url 'pueblos:delete_words' noticia.id %}" method="post">
+    {% csrf_token %}
+
+    {% for palabra in lista_palabras %}
+        <div class="form-group">
+            <label>
+                <input type="checkbox" name="words[]" value="{{ palabra.palabra }}" />
+                {{ palabra.palabra }}
+            </label>
+        </div>
+    {% endfor %}
+    <br />
+    <input type="checkbox" name="delete" value="delete" />
+        ¿Añadir a lista de exclusiones? Las palabras no aparecerán para ninguna categoría<br />
+
+    <input type="submit" value="Eliminar" />
+    </form>
+
+    <br />
+    <br />
+    <a href="{{request.META.HTTP_REFERER}}">Volver atrás</a>
+{% endblock content %}

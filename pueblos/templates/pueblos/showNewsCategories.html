@@ -1,0 +1,62 @@
+{% extends 'pueblos/base.html' %}
+{% load staticfiles%}
+{% block content %}
+    {% if news %}
+        <h1>{{ news.dstitular }}</h1>
+        <p>{{ news.dscuerpo }}</p>
+        <div>
+            <h4>Categorias de la noticia:</h4>
+            <ul class="list-unstyled">
+            {% for category in categories %}
+                <li>
+                    {{ category }}
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+
+        <div>
+            <h4>Categorias sugeridas:</h4>
+            <form class="userinput form-horizontal" role="form" method="POST" action="{% url 'pueblos:save_category' %}">
+                {% csrf_token %}
+                <input hidden="hidden" name="id" value="{{ news.id }}">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for category, values in suggested_categories.items %}
+                        <tr>
+                            <td class="category">
+                                {% if values.status == '1' %}
+                                    <span class="glyphicon glyphicon-ok"></span>
+                                {% elif values.status == '2' %}
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                {% endif %}
+                                {{ category }}
+                            </td>
+                            <td>
+                                <input hidden="hidden" name="category_id" value="{{ values.category_id }}"/>
+                                <button class="btn btn-success btn-add" type="submit">
+                                    <span class="glyphicon glyphicon-ok"></span>
+                                </button>
+                                <button class="btn btn-danger btn-remove" type="submit">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </form>
+            <span class="label col-xs-offset-4" hidden="hidden" id="message"></span>
+        </div>
+    {% else %}
+        <p>No hay una noticia con ese identificador.</p>
+    {% endif %}
+    <a href="{{request.META.HTTP_REFERER}}">Volver atrás</a>
+    <script type="text/javascript" src="{%  static 'pueblos/js/showNewsCategories.js' %}"></script>
+{% endblock content %}

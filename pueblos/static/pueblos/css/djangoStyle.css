@@ -1,0 +1,13 @@
+.ajaxProgress {
+    display: none;
+    text-align: center;
+    padding: 3em;
+    width: 95%;
+}
+
+.hr {
+    width: 100%;
+    color: black;
+    height: 2px;
+    background-color: black;
+}
